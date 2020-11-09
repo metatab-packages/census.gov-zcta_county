@@ -1,0 +1,38 @@
+Declare,metatab-latest
+Title,Zip code (zcta) To County Crosswalk
+Description,Maps Cenus zip-code tabulation areas to Counties
+Identifier,4a2808ec-d313-4c5b-9bce-9da981899bc1
+Name,census.gov-zcta_county-1.1.1
+Dataset,zcta_county
+Origin,census.gov
+Time,
+Space,
+Grain,
+Variant,
+Version,1.1.1
+Version.Major,1
+Version.Minor,1
+Version.Patch,1
+Created,2020-11-09T21:45:28
+Modified,2020-11-09T22:02:29
+
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+
+Section,References,Name,Description,
+Reference,censusgeo://2018/5/CA/zcta/,zctas,ZCTA Geography file,
+Reference,censusgeo://2018/5/US/county/,counties,Counties geography file,
+
+Section,Resources,Name,Description,
+Datafile,notebooks/Extract.ipynb#df,county_zcta,County to Zcta Crosswalk,
+
+Section,Schema,DataType,Description,,
+Table,county_zcta,,,,
+Table.Column,state,integer,State FIPS code,,
+Table.Column,county,integer,County FIPS code,,
+Table.Column,zcta,integer,Zcta (zip) code,,
+Table.Column,zcta_geoid,string,Zcta geoid,,
+Table.Column,county_geoid,string,County geoid,,
